@@ -5,6 +5,10 @@ import { initRecipes, setupPrepModal } from "./recipes.js";
 import { initShopping } from "./shopping.js";
 import { setupWikiModal } from "./wikipedia.js";
 
+// I found a bug where if you enter an ingredient 'carrots' from the autosuggest, 
+// it is not the same as the 'carrot' ingredient in the recipes tab, which seems 
+// like a bug since both should relate to the same ingredient.
+
 let currentUser = null;
 
 async function boot() {
